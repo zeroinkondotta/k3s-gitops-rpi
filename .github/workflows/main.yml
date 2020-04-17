@@ -1,0 +1,17 @@
+
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Validate Helm Releases
+        uses: stefanprodan/hrval-action@v3.1.0
+        with:
+          helmRelease: deployments/
+          kubernetesVersion: 1.16.3
+          ignoreValues: false
