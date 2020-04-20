@@ -139,7 +139,7 @@ spec:
 #          cyberpower-pdu:
 #            url: https://raw.githubusercontent.com/onedr0p/k3s-gitops/master/dashboards/cyberpower-pdu.json
 #            datasource: Prometheus
-#      additionalDataSources:
+      additionalDataSources:
       - name: loki
         type: loki
         access: proxy
